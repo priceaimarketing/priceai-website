@@ -44,17 +44,6 @@ export default function Hero() {
         style={{ opacity: contentOpacity, y: contentY }}
         className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20 text-center"
       >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#3FB700]/30 bg-[#3FB700]/10 text-[#52d400] text-sm font-medium mb-8 backdrop-blur-sm"
-        >
-          <span className="w-2 h-2 rounded-full bg-[#3FB700] animate-pulse" />
-          Ireland&apos;s AI-Powered Marketing Agency
-        </motion.div>
-
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

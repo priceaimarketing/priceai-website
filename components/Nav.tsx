@@ -39,7 +39,7 @@ export default function Nav() {
         {/* Brand name */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-[#3FB700] text-xl font-bold tracking-tight hover:opacity-85 transition-opacity leading-none"
+          className="text-[#3FB700] text-2xl font-bold tracking-tight hover:opacity-85 transition-opacity leading-none"
         >
           PRice AI Marketing
         </button>
