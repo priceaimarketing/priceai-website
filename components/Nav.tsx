@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
@@ -39,13 +40,17 @@ export default function Nav() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-xl font-bold text-white tracking-tight hover:opacity-90 transition-opacity"
+          className="hover:opacity-90 transition-opacity"
         >
-          Price{' '}
-          <span className="bg-gradient-to-r from-[#6366f1] to-[#a78bfa] bg-clip-text text-transparent">
-            AI
-          </span>{' '}
-          Marketing
+          <Image
+            src="/images/logo.png"
+            alt="Price AI Marketing"
+            width={140}
+            height={40}
+            style={{ width: '140px', height: 'auto' }}
+            className="object-contain"
+            priority
+          />
         </button>
 
         {/* Desktop Nav */}
@@ -63,7 +68,7 @@ export default function Nav() {
             href="https://calendly.com/padraigrice"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-[#6366f1] hover:bg-[#7678ed] text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.35)] hover:shadow-[0_0_30px_rgba(99,102,241,0.55)] hover:-translate-y-0.5"
+            className="px-5 py-2.5 bg-[#3FB700] hover:bg-[#38a600] text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-[0_0_20px_rgba(63,183,0,0.35)] hover:shadow-[0_0_30px_rgba(63,183,0,0.55)] hover:-translate-y-0.5"
           >
             Book a Call
           </a>
@@ -112,7 +117,7 @@ export default function Nav() {
                   href="https://calendly.com/padraigrice"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center px-5 py-3 bg-[#6366f1] hover:bg-[#7678ed] text-white font-semibold rounded-xl transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.35)]"
+                  className="block w-full text-center px-5 py-3 bg-[#3FB700] hover:bg-[#38a600] text-white font-semibold rounded-xl transition-all duration-200 shadow-[0_0_20px_rgba(63,183,0,0.35)]"
                 >
                   Book a Call
                 </a>

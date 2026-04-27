@@ -23,15 +23,15 @@ export default function Hero() {
       {/* ── Parallax background ── */}
       <motion.div style={{ y: bgY }} className="absolute inset-0 -z-10">
         {/* Dot-grid pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(rgba(99,102,241,0.12)_1px,transparent_1px)] [background-size:32px_32px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(63,183,0,0.12)_1px,transparent_1px)] [background-size:32px_32px]" />
 
         {/* Gradient orbs */}
-        <div className="absolute top-[20%] left-[15%] w-[500px] h-[500px] rounded-full bg-[#6366f1]/15 blur-[120px] animate-pulse-glow" />
+        <div className="absolute top-[20%] left-[15%] w-[500px] h-[500px] rounded-full bg-[#3FB700]/15 blur-[120px] animate-pulse-glow" />
         <div
-          className="absolute bottom-[15%] right-[10%] w-[400px] h-[400px] rounded-full bg-[#8b5cf6]/12 blur-[100px] animate-pulse-glow"
+          className="absolute bottom-[15%] right-[10%] w-[400px] h-[400px] rounded-full bg-[#3FB700]/12 blur-[100px] animate-pulse-glow"
           style={{ animationDelay: '1.5s' }}
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#6366f1]/5 blur-[160px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#3FB700]/5 blur-[160px]" />
 
         {/* Top vignette */}
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#07070c] to-transparent" />
@@ -49,9 +49,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#6366f1]/30 bg-[#6366f1]/10 text-[#818cf8] text-sm font-medium mb-8 backdrop-blur-sm"
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#3FB700]/30 bg-[#3FB700]/10 text-[#52d400] text-sm font-medium mb-8 backdrop-blur-sm"
         >
-          <span className="w-2 h-2 rounded-full bg-[#6366f1] animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#3FB700] animate-pulse" />
           Ireland&apos;s AI-Powered Marketing Agency
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function Hero() {
         >
           <span className="text-white">AI-Powered Marketing</span>
           <br />
-          <span className="bg-gradient-to-r from-[#6366f1] via-[#818cf8] to-[#a78bfa] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#3FB700] via-[#52d400] to-[#6fe800] bg-clip-text text-transparent">
             That Works While You Sleep
           </span>
         </motion.h1>
@@ -90,14 +90,14 @@ export default function Hero() {
             href="https://calendly.com/padraigrice"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-8 py-4 bg-[#6366f1] hover:bg-[#7678ed] text-white font-semibold rounded-xl transition-all duration-300 shadow-[0_0_35px_rgba(99,102,241,0.45)] hover:shadow-[0_0_55px_rgba(99,102,241,0.65)] hover:-translate-y-1 text-lg w-full sm:w-auto"
+            className="group relative px-8 py-4 bg-[#3FB700] hover:bg-[#38a600] text-white font-semibold rounded-xl transition-all duration-300 shadow-[0_0_35px_rgba(63,183,0,0.45)] hover:shadow-[0_0_55px_rgba(63,183,0,0.65)] hover:-translate-y-1 text-lg w-full sm:w-auto"
           >
             Book a Free Call
             <span className="ml-2 inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
           </a>
           <button
             onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 border border-white/15 hover:border-[#6366f1]/50 text-white font-semibold rounded-xl hover:bg-[#6366f1]/8 transition-all duration-300 hover:-translate-y-1 text-lg backdrop-blur-sm w-full sm:w-auto"
+            className="px-8 py-4 border border-white/15 hover:border-[#3FB700]/50 text-white font-semibold rounded-xl hover:bg-[#3FB700]/8 transition-all duration-300 hover:-translate-y-1 text-lg backdrop-blur-sm w-full sm:w-auto"
           >
             See Our Services
           </button>
@@ -114,7 +114,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-px h-10 bg-gradient-to-b from-[#6366f1]/50 to-transparent"
+            className="w-px h-10 bg-gradient-to-b from-[#3FB700]/50 to-transparent"
           />
         </motion.div>
       </motion.div>

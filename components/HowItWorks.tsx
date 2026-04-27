@@ -46,8 +46,8 @@ export default function HowItWorks() {
     >
       {/* Subtle section background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#07070c] via-[#09091a] to-[#07070c]" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#6366f1]/25 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#6366f1]/25 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3FB700]/25 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#3FB700]/25 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -58,7 +58,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.65 }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[#6366f1] text-xs font-semibold tracking-[0.2em] uppercase mb-5 px-4 py-1.5 rounded-full border border-[#6366f1]/20 bg-[#6366f1]/8">
+          <span className="inline-block text-[#3FB700] text-xs font-semibold tracking-[0.2em] uppercase mb-5 px-4 py-1.5 rounded-full border border-[#3FB700]/20 bg-[#3FB700]/8">
             The Process
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -73,7 +73,7 @@ export default function HowItWorks() {
         <div className="relative">
           {/* Desktop connecting line */}
           <div className="hidden md:block absolute top-9 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] h-px">
-            <div className="w-full h-full bg-gradient-to-r from-[#6366f1]/40 via-[#6366f1]/20 to-[#6366f1]/40" />
+            <div className="w-full h-full bg-gradient-to-r from-[#3FB700]/40 via-[#3FB700]/20 to-[#3FB700]/40" />
             {/* Dashed overlay */}
             <div
               className="absolute inset-0"
@@ -96,12 +96,12 @@ export default function HowItWorks() {
               >
                 {/* Circle */}
                 <div className="relative inline-flex mb-8">
-                  <div className="absolute inset-0 rounded-full bg-[#6366f1]/20 blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative w-[72px] h-[72px] rounded-full border border-[#6366f1]/40 bg-[#0f0f1f] flex items-center justify-center text-[#6366f1] group-hover:border-[#6366f1]/80 transition-all duration-300 group-hover:bg-[#6366f1]/10">
+                  <div className="absolute inset-0 rounded-full bg-[#3FB700]/20 blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative w-[72px] h-[72px] rounded-full border border-[#3FB700]/40 bg-[#0f0f1f] flex items-center justify-center text-[#3FB700] group-hover:border-[#3FB700]/80 transition-all duration-300 group-hover:bg-[#3FB700]/10">
                     {step.icon}
                   </div>
                   {/* Step number badge */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#6366f1] flex items-center justify-center">
+                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#3FB700] flex items-center justify-center">
                     <span className="text-white text-xs font-bold">{i + 1}</span>
                   </div>
                 </div>

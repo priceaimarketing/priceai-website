@@ -5,8 +5,8 @@
 :root {
   --bg: #07070c;
   --bg-card: #0f0f1f;
-  --accent: #6366f1;
-  --accent-light: #818cf8;
+  --accent: #3FB700;
+  --accent-light: #52d400;
 }
 
 * {
@@ -32,11 +32,11 @@ body {
   background: #07070c;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
+  background: #3FB700;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #818cf8;
+  background: #52d400;
 }
 
 @keyframes gradient-shift {

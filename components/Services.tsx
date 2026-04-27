@@ -12,10 +12,10 @@ const services = [
     title: 'AI Content & Social Media',
     description:
       'Daily automated content, short-form avatar videos, LinkedIn and Instagram management — all powered by AI and built around your brand.',
-    accent: '#6366f1',
-    glow: 'hover:shadow-[0_8px_40px_rgba(99,102,241,0.2)]',
-    border: 'hover:border-[#6366f1]/50',
-    dot: 'bg-[#6366f1]',
+    accent: '#3FB700',
+    glow: 'hover:shadow-[0_8px_40px_rgba(63,183,0,0.2)]',
+    border: 'hover:border-[#3FB700]/50',
+    dot: 'bg-[#3FB700]',
   },
   {
     icon: (
@@ -26,10 +26,10 @@ const services = [
     title: 'Web Design & Development',
     description:
       'Fast, modern websites built with AI — deployed in days, not weeks. Clean design, blazing performance, and built to convert.',
-    accent: '#8b5cf6',
-    glow: 'hover:shadow-[0_8px_40px_rgba(139,92,246,0.2)]',
-    border: 'hover:border-[#8b5cf6]/50',
-    dot: 'bg-[#8b5cf6]',
+    accent: '#3FB700',
+    glow: 'hover:shadow-[0_8px_40px_rgba(63,183,0,0.2)]',
+    border: 'hover:border-[#3FB700]/50',
+    dot: 'bg-[#3FB700]',
   },
   {
     icon: (
@@ -40,10 +40,10 @@ const services = [
     title: 'SEO & Lead Generation',
     description:
       'AI-driven SEO strategies and automated lead generation systems that bring qualified prospects to your door around the clock.',
-    accent: '#a78bfa',
-    glow: 'hover:shadow-[0_8px_40px_rgba(167,139,250,0.2)]',
-    border: 'hover:border-[#a78bfa]/50',
-    dot: 'bg-[#a78bfa]',
+    accent: '#3FB700',
+    glow: 'hover:shadow-[0_8px_40px_rgba(63,183,0,0.2)]',
+    border: 'hover:border-[#3FB700]/50',
+    dot: 'bg-[#3FB700]',
   },
 ]
 
@@ -75,7 +75,7 @@ export default function Services() {
           transition={{ duration: 0.65 }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[#6366f1] text-xs font-semibold tracking-[0.2em] uppercase mb-5 px-4 py-1.5 rounded-full border border-[#6366f1]/20 bg-[#6366f1]/8">
+          <span className="inline-block text-[#3FB700] text-xs font-semibold tracking-[0.2em] uppercase mb-5 px-4 py-1.5 rounded-full border border-[#3FB700]/20 bg-[#3FB700]/8">
             What We Do
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">

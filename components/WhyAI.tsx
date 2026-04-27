@@ -54,7 +54,7 @@ export default function WhyAI() {
           transition={{ duration: 0.65 }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[#6366f1] text-xs font-semibold tracking-[0.2em] uppercase mb-5 px-4 py-1.5 rounded-full border border-[#6366f1]/20 bg-[#6366f1]/8">
+          <span className="inline-block text-[#3FB700] text-xs font-semibold tracking-[0.2em] uppercase mb-5 px-4 py-1.5 rounded-full border border-[#3FB700]/20 bg-[#3FB700]/8">
             The Numbers
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -75,19 +75,19 @@ export default function WhyAI() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="group relative p-8 rounded-2xl border border-white/8 bg-[#0f0f1f] hover:border-[#6366f1]/35 hover:shadow-[0_8px_40px_rgba(99,102,241,0.15)] transition-all duration-300 text-center overflow-hidden"
+              className="group relative p-8 rounded-2xl border border-white/8 bg-[#0f0f1f] hover:border-[#3FB700]/35 hover:shadow-[0_8px_40px_rgba(63,183,0,0.15)] transition-all duration-300 text-center overflow-hidden"
             >
               {/* Background glow on hover */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#6366f1]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#3FB700]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-[#6366f1]/10 text-[#6366f1] flex items-center justify-center mx-auto mb-5 group-hover:bg-[#6366f1]/18 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-[#3FB700]/10 text-[#3FB700] flex items-center justify-center mx-auto mb-5 group-hover:bg-[#3FB700]/18 transition-colors duration-300">
                   {stat.icon}
                 </div>
 
                 {/* Number */}
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-white via-[#818cf8] to-[#6366f1] bg-clip-text text-transparent mb-3 leading-none">
+                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-white via-[#52d400] to-[#3FB700] bg-clip-text text-transparent mb-3 leading-none">
                   {stat.number}
                 </div>
 
