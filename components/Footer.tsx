@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div className="text-center md:text-left">
             <div className="text-lg font-bold text-white mb-1">
-              Price{' '}
+              PRice{' '}
               <span className="bg-gradient-to-r from-[#3FB700] to-[#6fe800] bg-clip-text text-transparent">
                 AI
               </span>{' '}
