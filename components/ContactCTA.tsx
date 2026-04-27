@@ -56,7 +56,7 @@ export default function ContactCTA() {
             </h2>
 
             <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl leading-relaxed">
-              Book a free strategy call with Padraig today. No pressure, no jargon — just an honest conversation about how AI can transform your marketing.
+              Book a free strategy call with Padraig today. No pressure just an honest conversation to show how we can help.
             </p>
 
             <motion.a

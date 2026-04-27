@@ -25,7 +25,7 @@ const services = [
     ),
     title: 'Web Design & Development',
     description:
-      'Fast, modern websites built with AI — deployed in days, not weeks. Clean design, blazing performance, and built to convert.',
+      'Modern websites deployed in days. Clean design and built to convert.',
     accent: '#3FB700',
     glow: 'hover:shadow-[0_8px_40px_rgba(63,183,0,0.2)]',
     border: 'hover:border-[#3FB700]/50',
@@ -39,7 +39,7 @@ const services = [
     ),
     title: 'SEO & Lead Generation',
     description:
-      'AI-driven SEO strategies and automated lead generation systems that bring qualified prospects to your door around the clock.',
+      'AI-driven SEO strategies and automated lead generation systems that never clock off.',
     accent: '#3FB700',
     glow: 'hover:shadow-[0_8px_40px_rgba(63,183,0,0.2)]',
     border: 'hover:border-[#3FB700]/50',

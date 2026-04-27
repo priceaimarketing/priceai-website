@@ -65,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          We build intelligent content systems and marketing automation for ambitious Irish businesses
+          We build powerful content systems and marketing automation for ambitious businesses.
         </motion.p>
 
         {/* CTAs */}
