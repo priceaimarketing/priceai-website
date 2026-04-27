@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
@@ -37,20 +36,12 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        {/* Logo */}
+        {/* Brand name */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="hover:opacity-90 transition-opacity"
+          className="text-[#3FB700] text-xl font-bold tracking-tight hover:opacity-85 transition-opacity leading-none"
         >
-          <Image
-            src="/images/logo.png"
-            alt="Price AI Marketing"
-            width={140}
-            height={40}
-            style={{ width: '140px', height: 'auto' }}
-            className="object-contain"
-            priority
-          />
+          PRice AI Marketing
         </button>
 
         {/* Desktop Nav */}
