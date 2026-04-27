@@ -87,7 +87,7 @@ export default function About() {
 
             <div className="space-y-5 text-gray-400 text-lg leading-relaxed">
               <p>
-                Price AI Marketing is an Irish AI-powered digital marketing agency founded by Padraig Rice. We help ambitious businesses across Ireland grow faster using the latest AI tools and automation systems.
+                PRice AI Marketing is an Irish AI-powered digital marketing agency founded by Padraig Rice. We help ambitious businesses across Ireland grow faster using the latest AI tools and automation systems.
               </p>
               <p>
                 We are not a traditional agency — we are a technology-first team that delivers more output, faster results and smarter systems than anything you have worked with before.

@@ -9,17 +9,17 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Price AI Marketing | AI-Powered Marketing for Irish Businesses',
+  title: 'PRice AI Marketing | AI-Powered Marketing for Irish Businesses',
   description:
     'We build intelligent content systems and marketing automation for ambitious Irish businesses. AI content, web design, SEO and lead generation.',
   keywords:
     'AI marketing Ireland, digital marketing, AI content, social media automation, SEO Ireland',
   openGraph: {
-    title: 'Price AI Marketing | AI-Powered Marketing That Works While You Sleep',
+    title: 'PRice AI Marketing | AI-Powered Marketing That Works While You Sleep',
     description:
       'Intelligent content systems and marketing automation for ambitious Irish businesses.',
     url: 'https://priceaimarketing.ie',
-    siteName: 'Price AI Marketing',
+    siteName: 'PRice AI Marketing',
     locale: 'en_IE',
     type: 'website',
   },

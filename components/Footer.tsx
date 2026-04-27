@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-gray-600 text-sm">
-            © 2026 Price AI Marketing. All rights reserved.
+            © 2026 PRice AI Marketing. All rights reserved.
           </div>
 
           {/* Social links */}
