@@ -35,16 +35,18 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        {/* Brand name */}
+      {/* Main nav row — brand absolutely centered, links anchored right */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-end">
+
+        {/* Brand name — true center */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-[#3FB700] text-2xl font-bold tracking-tight hover:opacity-85 transition-opacity leading-none"
+          className="absolute left-1/2 -translate-x-1/2 text-[#3FB700] text-2xl md:text-4xl font-bold tracking-tight hover:opacity-85 transition-opacity leading-none whitespace-nowrap"
         >
           PRice AI Marketing
         </button>
 
-        {/* Desktop Nav */}
+        {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <button
@@ -83,7 +85,7 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — brand centered above stacked links */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -98,7 +100,7 @@ export default function Nav() {
                 <button
                   key={link.id}
                   onClick={() => scrollTo(link.id)}
-                  className="block w-full text-left text-gray-300 hover:text-white transition-colors py-3 text-base font-medium border-b border-white/5 last:border-0"
+                  className="block w-full text-center text-gray-300 hover:text-white transition-colors py-3 text-base font-medium border-b border-white/5 last:border-0"
                 >
                   {link.label}
                 </button>
