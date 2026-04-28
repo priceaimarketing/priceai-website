@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-6">
             <a
-              href="https://linkedin.com/company/priceaimarketing"
+              href="https://www.linkedin.com/in/padraig-rice"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-500 hover:text-[#3FB700] transition-colors duration-200 text-sm font-medium group"
@@ -52,7 +52,7 @@ export default function Footer() {
             </a>
             <span className="text-gray-700">·</span>
             <a
-              href="https://instagram.com/priceaimarketing"
+              href="https://www.instagram.com/priceaimarketing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-500 hover:text-[#3FB700] transition-colors duration-200 text-sm font-medium group"
