@@ -78,10 +78,10 @@ export default function About() {
               About Us
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-              A Different Kind
+              Proven Strategies Delivered With
               <br />
               <span className="bg-gradient-to-r from-[#3FB700] to-[#6fe800] bg-clip-text text-transparent">
-                of Agency
+                The Latest Technology
               </span>
             </h2>
 
@@ -90,7 +90,7 @@ export default function About() {
                 PRice AI Marketing is a technology driven digital marketing agency founded by Padraig Rice. We help ambitious businesses around the world grow faster using the latest tools and automation systems.
               </p>
               <p>
-                We are not a traditional agency. We are a technology-first team that delivers more output, faster results and smarter systems than anything you have worked with before.
+                We build the machine. You reap the results.
               </p>
             </div>
 
