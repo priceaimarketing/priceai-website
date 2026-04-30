@@ -51,10 +51,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-6 tracking-tight"
         >
-          <span className="text-white">AI-Powered Marketing</span>
+          <span className="text-white">Your Vision</span>
           <br />
-          <span className="bg-gradient-to-r from-[#3FB700] via-[#52d400] to-[#6fe800] bg-clip-text text-transparent">
-            That Works While You Sleep
+          <span className="text-[#3FB700]">
+            Executed By Our Systems
           </span>
         </motion.h1>
 
