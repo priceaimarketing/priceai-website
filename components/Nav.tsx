@@ -39,7 +39,7 @@ export default function Nav() {
     >
       {/* Main nav row */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        {/* Left lockup — logo + brand name side by side */}
+        {/* Left lockup: logo + brand name side by side */}
         <Link href="/" aria-label="PRice AI Marketing home" className="flex items-center gap-[10px] hover:opacity-85 transition-opacity">
           <Image
             src="/images/logo.png"
@@ -96,7 +96,7 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile menu — brand centered above stacked links */}
+      {/* Mobile menu: brand centered above stacked links */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

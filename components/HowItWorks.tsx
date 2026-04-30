@@ -12,7 +12,7 @@ const steps = [
     ),
     title: 'Discover',
     description:
-      'We learn your business, audience, and goals through a deep-dive strategy session — understanding exactly where you are and where you want to go.',
+      'We learn your business, audience, and goals through a deep-dive strategy session, understanding exactly where you are and where you want to go.',
   },
   {
     number: '02',
@@ -23,7 +23,7 @@ const steps = [
     ),
     title: 'Build',
     description:
-      'We build your AI marketing system from scratch — content pipelines, automation workflows and strategy — all in place and ready to run.',
+      'We build your AI marketing system from scratch: content pipelines, automation workflows and strategy, all in place and ready to run.',
   },
   {
     number: '03',
@@ -34,7 +34,7 @@ const steps = [
     ),
     title: 'Scale',
     description:
-      'We manage and scale your results every month — continuously optimising content, campaigns, and systems to compound your growth.',
+      'We manage and scale your results every month, continuously optimising content, campaigns, and systems to compound your growth.',
   },
 ]
 
