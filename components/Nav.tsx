@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
@@ -35,54 +37,63 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      {/* Main nav row — brand absolutely centered, links anchored right */}
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-end">
+      {/* Main nav row */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+        {/* Left lockup — logo + brand name side by side */}
+        <Link href="/" aria-label="PRice AI Marketing home" className="flex items-center gap-[10px] hover:opacity-85 transition-opacity">
+          <Image
+            src="/images/logo.png"
+            alt="PRice AI Marketing"
+            width={220}
+            height={55}
+            className="h-[55px] w-auto"
+            priority
+          />
+          <span className="text-[#3FB700] text-xl md:text-2xl font-bold tracking-tight leading-none whitespace-nowrap">
+            PRice AI Marketing
+          </span>
+        </Link>
 
-        {/* Brand name — true center */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="absolute left-1/2 -translate-x-1/2 text-[#3FB700] text-2xl md:text-4xl font-bold tracking-tight hover:opacity-85 transition-opacity leading-none whitespace-nowrap"
-        >
-          PRice AI Marketing
-        </button>
-
-        {/* Desktop nav links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => scrollTo(link.id)}
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-200 font-medium tracking-wide"
+        {/* Right nav */}
+        <div className="justify-self-end">
+          {/* Desktop nav links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollTo(link.id)}
+                className="text-sm text-gray-400 hover:text-white transition-colors duration-200 font-medium tracking-wide whitespace-nowrap"
+              >
+                {link.label}
+              </button>
+            ))}
+            <a
+              href="https://calendly.com/padraigrice"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 bg-[#3FB700] hover:bg-[#38a600] text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-[0_0_20px_rgba(63,183,0,0.35)] hover:shadow-[0_0_30px_rgba(63,183,0,0.55)] hover:-translate-y-0.5"
             >
-              {link.label}
-            </button>
-          ))}
-          <a
-            href="https://calendly.com/padraigrice"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-[#3FB700] hover:bg-[#38a600] text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-[0_0_20px_rgba(63,183,0,0.35)] hover:shadow-[0_0_30px_rgba(63,183,0,0.55)] hover:-translate-y-0.5"
-          >
-            Book a Call
-          </a>
-        </div>
+              Book a Call
+            </a>
+          </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-gray-400 hover:text-white p-1 transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-gray-400 hover:text-white p-1 transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu — brand centered above stacked links */}
