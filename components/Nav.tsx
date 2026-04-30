@@ -44,12 +44,12 @@ export default function Nav() {
           <Image
             src="/images/logo.png"
             alt="PRice AI Marketing"
-            width={220}
-            height={55}
-            className="h-[55px] w-auto"
+            width={260}
+            height={65}
+            className="h-[65px] w-auto"
             priority
           />
-          <span className="text-[#3FB700] text-xl md:text-2xl font-bold tracking-tight leading-none whitespace-nowrap">
+          <span className="text-[#3FB700] text-[23px] md:text-[27px] font-bold tracking-tight leading-none whitespace-nowrap">
             PRice AI Marketing
           </span>
         </Link>
