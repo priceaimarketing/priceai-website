@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="py-28 lg:py-36 px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-stretch">
           {/* Left: Visual card */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -16,7 +16,7 @@ export default function About() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative p-10 rounded-3xl border border-[#3FB700]/20 bg-[#0f0f1f] overflow-hidden">
+            <div className="relative p-10 rounded-3xl border border-[#3FB700]/20 bg-[#0f0f1f] overflow-hidden h-full">
               {/* Background orbs */}
               <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#3FB700]/10 rounded-full blur-3xl" />
               <div className="absolute -bottom-10 -left-10 w-36 h-36 bg-[#3FB700]/8 rounded-full blur-2xl" />
@@ -48,8 +48,8 @@ export default function About() {
                     src="/images/speaker.png"
                     alt="Padraig Rice speaking"
                     width={600}
-                    height={400}
-                    style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                    height={450}
+                    style={{ width: '100%', height: '450px', display: 'block', objectFit: 'cover', objectPosition: 'top' }}
                   />
                   {/* Bottom fade into card background */}
                   <div
