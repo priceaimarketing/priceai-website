@@ -1,13 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-
-const pillars = [
-  { label: 'Technology-First Approach', icon: '⚡' },
-  { label: 'AI-Powered Systems', icon: '🤖' },
-  { label: 'Continuous Optimisation', icon: '📈' },
-  { label: 'Transparent Results', icon: '🎯' },
-]
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -40,21 +34,35 @@ export default function About() {
                 {/* Divider */}
                 <div className="h-px bg-gradient-to-r from-[#3FB700]/30 to-transparent mb-8" />
 
-                {/* Pillars */}
-                <div className="space-y-4">
-                  {pillars.map((pillar, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                      className="flex items-center gap-4 p-3 rounded-xl bg-white/3 border border-white/5"
-                    >
-                      <span className="text-xl">{pillar.icon}</span>
-                      <span className="text-gray-200 font-medium text-sm">{pillar.label}</span>
-                    </motion.div>
-                  ))}
+                {/* Speaker photo */}
+                <div
+                  style={{
+                    position: 'relative',
+                    borderRadius: '16px',
+                    overflow: 'hidden',
+                    border: '1px solid rgba(63,183,0,0.3)',
+                    boxShadow: '0 0 20px rgba(63,183,0,0.15)',
+                  }}
+                >
+                  <Image
+                    src="/images/speaker.png"
+                    alt="Padraig Rice speaking"
+                    width={600}
+                    height={400}
+                    style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                  />
+                  {/* Bottom fade into card background */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      height: '80px',
+                      background: 'linear-gradient(to bottom, transparent, #0f0f1f)',
+                      pointerEvents: 'none',
+                    }}
+                  />
                 </div>
 
                 {/* Founder */}
