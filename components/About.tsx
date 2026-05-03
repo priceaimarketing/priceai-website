@@ -49,7 +49,7 @@ export default function About() {
                     alt="Padraig Rice speaking"
                     width={600}
                     height={450}
-                    style={{ width: '100%', height: '450px', display: 'block', objectFit: 'cover', objectPosition: 'top' }}
+                    style={{ width: '100%', height: '450px', display: 'block', objectFit: 'cover', objectPosition: 'center 20%' }}
                   />
                   {/* Bottom fade into card background */}
                   <div
