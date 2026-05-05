@@ -78,3 +78,25 @@ At the end of any session where a new workflow was built (e.g. Higgsfield genera
 - No sycophantic openers or closing fluff.
 - No emojis or em-dashes.
 - Do not guess APIs, versions, flags, commit SHAs, or package names. Verify by reading code or docs before asserting.
+
+## Business Files Location
+All business documents are stored at: /Users/padraigrice/Desktop/Business/PRice AI Marketing/
+
+Key folders:
+- Company Files: /Users/padraigrice/Desktop/Business/PRice AI Marketing/Company Files/
+- Invoices Sent: /Users/padraigrice/Desktop/Business/PRice AI Marketing/Invoices sent/
+- Invoices Received: /Users/padraigrice/Desktop/Business/PRice AI Marketing/Payments/Invoices Received/
+- Receipts: /Users/padraigrice/Desktop/Business/PRice AI Marketing/Payments/Receipts/
+- Prospects: /Users/padraigrice/Desktop/Business/PRice AI Marketing/Prospects/
+- Contracts: /Users/padraigrice/Desktop/Business/PRice AI Marketing/Contracts/
+
+## Business Details (for invoices, proposals, contracts)
+- Legal name: PRice AI Marketing Limited
+- Company number: 789856
+- Address: 169 Philipsburgh Avenue, Dublin 3, Ireland, D03 FK25
+- Phone: +353 85 83 88 596
+- Email: padraig@priceaimarketing.ie
+- Website: priceaimarketing.ie
+- Account number: 11166989
+- Sort code: 23-01-20
+- Default currency: € (EUR)
