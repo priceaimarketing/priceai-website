@@ -22,19 +22,18 @@ export default function Footer() {
               </span>{' '}
               Marketing
             </div>
-            <a
-              href="https://priceaimarketing.ie"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-400 text-sm transition-colors"
-            >
-              priceaimarketing.ie
-            </a>
+            <span className="text-gray-500 text-sm">priceaimarketing.ie</span>
           </div>
 
-          {/* Copyright */}
-          <div className="text-gray-600 text-sm">
-            © 2026 PRice AI Marketing. All rights reserved.
+          {/* Copyright + email */}
+          <div className="text-center">
+            <div className="text-gray-600 text-sm">© 2026 PRice AI Marketing. All rights reserved.</div>
+            <a
+              href="mailto:padraig@priceaimarketing.ie"
+              className="text-gray-500 hover:text-[#3FB700] text-sm transition-colors duration-200 mt-1 inline-block"
+            >
+              padraig@priceaimarketing.ie
+            </a>
           </div>
 
           {/* Social links */}
