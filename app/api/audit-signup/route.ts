@@ -43,25 +43,26 @@ function confirmationEmailHtml(): string {
 <body style="margin:0;padding:0;background:#07070c;">
   <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;max-width:600px;margin:0 auto;background:#07070c;padding:48px 32px;">
 
-    <div style="margin-bottom:36px;">
-      <span style="display:inline-block;background:#3FB700;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:6px 14px;border-radius:20px;">PRice AI Marketing</span>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:40px;">
+      <img src="https://priceaimarketing.ie/images/logo.png" alt="PRice AI Marketing logo" width="40" height="40" style="display:block;border-radius:6px;" />
+      <span style="color:#ffffff;font-size:17px;font-weight:700;letter-spacing:-0.01em;">PRice AI Marketing</span>
     </div>
 
-    <h1 style="font-size:26px;font-weight:700;color:#ffffff;margin:0 0 20px;line-height:1.3;">Your Free AI Marketing Audit — Next Steps</h1>
+    <h1 style="font-size:26px;font-weight:700;color:#ffffff;margin:0 0 24px;line-height:1.3;">Your Free AI Marketing Audit: Next Steps</h1>
 
-    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 20px;">You just signed up for a free AI marketing audit. Good move.</p>
+    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 20px;">You just signed up for a free AI marketing audit so here's the next step.</p>
 
-    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 24px;">To get you the most useful audit possible, reply to this email with:</p>
+    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 20px;">To get the most out of this audit, reply to this email with:</p>
 
     <div style="background:#0f0f1f;border-left:3px solid #3FB700;border-radius:0 10px 10px 0;padding:24px 28px;margin:0 0 28px;">
       <p style="color:#ffffff;font-size:15px;font-weight:600;margin:0 0 14px;">1. Your website URL</p>
-      <p style="color:#ffffff;font-size:15px;font-weight:600;margin:0 0 14px;">2. Your social media handles<br><span style="color:#6b7280;font-weight:400;font-size:14px;">(LinkedIn, Instagram, TikTok — wherever you're active)</span></p>
-      <p style="color:#ffffff;font-size:15px;font-weight:600;margin:0;">3. What you're struggling with most in your marketing right now</p>
+      <p style="color:#ffffff;font-size:15px;font-weight:600;margin:0 0 14px;">2. Your social media handles<br><span style="color:#6b7280;font-weight:400;font-size:14px;">(LinkedIn, Instagram, TikTok, wherever you're active)</span></p>
+      <p style="color:#ffffff;font-size:15px;font-weight:600;margin:0;">3. What you're struggling with most in your marketing/business right now</p>
     </div>
 
-    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 20px;">I'll personally review everything and get back to you within <strong style="color:#ffffff;">48 hours</strong> with a direct breakdown of where you're leaving money on the table — and exactly how AI can fix it.</p>
+    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 20px;">I'll personally review everything and get back to you within <strong style="color:#ffffff;">48 hours</strong> with a direct breakdown of where you're leaving money on the table and exactly how I can fix it.</p>
 
-    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 40px;">No fluff. No sales pitch. Just a clear, actionable audit.</p>
+    <p style="color:#9ca3af;font-size:16px;line-height:1.75;margin:0 0 40px;">No-nonsense. No sales pitch. Just a clear, actionable audit.</p>
 
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;">
       <p style="color:#ffffff;font-size:15px;font-weight:700;margin:0 0 4px;">Padraig Rice</p>
@@ -126,7 +127,7 @@ export async function POST(request: NextRequest) {
     const { data: confirmData, error: confirmError } = await resend.emails.send({
       from: 'Padraig Rice <padraig@priceaimarketing.ie>',
       to: email,
-      subject: 'Your Free AI Marketing Audit — Next Steps',
+      subject: 'Your Free AI Marketing Audit: Next Steps',
       html: confirmationEmailHtml(),
     })
     if (confirmError) {
