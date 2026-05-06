@@ -82,6 +82,37 @@ const jsonLd = {
         'https://www.linkedin.com/in/padraig-rice',
         'https://www.instagram.com/priceaimarketing',
       ],
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: '1',
+        reviewCount: '1',
+      },
+    },
+    {
+      '@type': 'Review',
+      '@id': 'https://priceaimarketing.ie/#review-patrick-byrne',
+      itemReviewed: { '@id': 'https://priceaimarketing.ie/#localbusiness' },
+      author: {
+        '@type': 'Person',
+        name: 'Patrick Byrne',
+        jobTitle: 'CEO',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Annora AI',
+          url: 'https://annora.ai',
+        },
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      reviewBody:
+        'Padraig delivered huge growth and efficiency with how we approach content at Annora. Our YouTube series and LinkedIn strategy he built alongside us has been directly responsible for bringing in multiple five-figure deals every month. If you\'re a business looking to actually convert through content, he\'s the person to call.',
     },
     {
       '@type': 'Person',
