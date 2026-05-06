@@ -94,8 +94,16 @@ function notificationEmailHtml(email: string): string {
 }
 
 export async function POST(request: NextRequest) {
+  console.log('[audit-signup] Request received')
+  console.log('[audit-signup] Env check:', {
+    hasResendKey: !!process.env.RESEND_API_KEY,
+    hasSheetEmail: !!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    hasSheetKey: !!process.env.GOOGLE_PRIVATE_KEY,
+  })
+
   try {
     const { email } = await request.json()
+    console.log('[audit-signup] Email:', email)
 
     if (!email || !isValidEmail(email)) {
       return NextResponse.json(
@@ -104,27 +112,47 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    await appendToSheet(email).catch((err) =>
-      console.error('Google Sheets error:', err)
-    )
+    // Step 1: Google Sheets (non-blocking)
+    console.log('[audit-signup] Step 1: writing to Sheets...')
+    try {
+      await appendToSheet(email)
+      console.log('[audit-signup] Step 1: Sheets write OK')
+    } catch (err) {
+      console.error('[audit-signup] Step 1: Sheets write FAILED:', err)
+    }
 
-    await resend.emails.send({
-      from: 'Padraig Rice <padraig@priceaimarketing.ie>',
-      to: email,
-      subject: 'Your Free AI Marketing Audit — Next Steps',
-      html: confirmationEmailHtml(),
-    })
+    // Step 2: Confirmation email to user
+    console.log('[audit-signup] Step 2: sending confirmation email to', email)
+    try {
+      const confirmResult = await resend.emails.send({
+        from: 'Padraig Rice <padraig@priceaimarketing.ie>',
+        to: email,
+        subject: 'Your Free AI Marketing Audit — Next Steps',
+        html: confirmationEmailHtml(),
+      })
+      console.log('[audit-signup] Step 2: confirmation email OK', confirmResult)
+    } catch (err) {
+      console.error('[audit-signup] Step 2: confirmation email FAILED:', err)
+      throw err
+    }
 
-    await resend.emails.send({
-      from: 'PRice AI Website <padraig@priceaimarketing.ie>',
-      to: 'padraig@priceaimarketing.ie',
-      subject: `New Audit Request: ${email}`,
-      html: notificationEmailHtml(email),
-    })
+    // Step 3: Notification email to Padraig (non-blocking)
+    console.log('[audit-signup] Step 3: sending notification to padraig@priceaimarketing.ie')
+    try {
+      const notifyResult = await resend.emails.send({
+        from: 'PRice AI Website <padraig@priceaimarketing.ie>',
+        to: 'padraig@priceaimarketing.ie',
+        subject: `New Audit Request: ${email}`,
+        html: notificationEmailHtml(email),
+      })
+      console.log('[audit-signup] Step 3: notification email OK', notifyResult)
+    } catch (err) {
+      console.error('[audit-signup] Step 3: notification email FAILED:', err)
+    }
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Audit signup error:', error)
+    console.error('[audit-signup] Fatal error:', error)
     return NextResponse.json(
       { error: 'Something went wrong. Please try again.' },
       { status: 500 }
