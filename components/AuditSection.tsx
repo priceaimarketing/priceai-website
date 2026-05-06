@@ -58,7 +58,7 @@ export default function AuditSection() {
           </h2>
 
           <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-            We'll analyse your current marketing, identify the gaps, and show you exactly where AI can save you time and make you money. No pitch. Just value.
+            We&apos;ll analyse your current marketing, identify the gaps, and show you exactly where AI can save you time and make you money. No pitch. Just value.
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function AuditSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">You're in — check your inbox.</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">You&apos;re in — check your inbox.</h3>
               <p className="text-gray-400 leading-relaxed max-w-md mx-auto">
                 Padraig will personally review your marketing and get back to you within 48 hours.
               </p>

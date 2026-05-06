@@ -159,7 +159,7 @@ export default function AuditStickyBar() {
                     </h3>
 
                     <p className="text-gray-400 text-[15px] leading-relaxed mb-6">
-                      We'll analyse your marketing, find the gaps, and show you exactly where AI can save you time and make you money.
+                      We&apos;ll analyse your marketing, find the gaps, and show you exactly where AI can save you time and make you money.
                     </p>
 
                     <form onSubmit={handleSubmit} className="space-y-3">
