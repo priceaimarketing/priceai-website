@@ -123,31 +123,30 @@ export async function POST(request: NextRequest) {
 
     // Step 2: Confirmation email to user
     console.log('[audit-signup] Step 2: sending confirmation email to', email)
-    try {
-      const confirmResult = await resend.emails.send({
-        from: 'Padraig Rice <padraig@priceaimarketing.ie>',
-        to: email,
-        subject: 'Your Free AI Marketing Audit — Next Steps',
-        html: confirmationEmailHtml(),
-      })
-      console.log('[audit-signup] Step 2: confirmation email OK', confirmResult)
-    } catch (err) {
-      console.error('[audit-signup] Step 2: confirmation email FAILED:', err)
-      throw err
+    const { data: confirmData, error: confirmError } = await resend.emails.send({
+      from: 'Padraig Rice <padraig@priceaimarketing.ie>',
+      to: email,
+      subject: 'Your Free AI Marketing Audit — Next Steps',
+      html: confirmationEmailHtml(),
+    })
+    if (confirmError) {
+      console.error('[audit-signup] Step 2: confirmation email FAILED:', JSON.stringify(confirmError))
+      return NextResponse.json({ error: 'Failed to send confirmation email.' }, { status: 500 })
     }
+    console.log('[audit-signup] Step 2: confirmation email OK, id:', confirmData?.id)
 
     // Step 3: Notification email to Padraig (non-blocking)
     console.log('[audit-signup] Step 3: sending notification to padraig@priceaimarketing.ie')
-    try {
-      const notifyResult = await resend.emails.send({
-        from: 'PRice AI Website <padraig@priceaimarketing.ie>',
-        to: 'padraig@priceaimarketing.ie',
-        subject: `New Audit Request: ${email}`,
-        html: notificationEmailHtml(email),
-      })
-      console.log('[audit-signup] Step 3: notification email OK', notifyResult)
-    } catch (err) {
-      console.error('[audit-signup] Step 3: notification email FAILED:', err)
+    const { data: notifyData, error: notifyError } = await resend.emails.send({
+      from: 'PRice AI Website <padraig@priceaimarketing.ie>',
+      to: 'padraig@priceaimarketing.ie',
+      subject: `New Audit Request: ${email}`,
+      html: notificationEmailHtml(email),
+    })
+    if (notifyError) {
+      console.error('[audit-signup] Step 3: notification email FAILED:', JSON.stringify(notifyError))
+    } else {
+      console.log('[audit-signup] Step 3: notification email OK, id:', notifyData?.id)
     }
 
     return NextResponse.json({ success: true })
