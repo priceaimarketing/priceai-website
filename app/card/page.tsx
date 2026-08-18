@@ -77,7 +77,7 @@ export default function CardPage() {
         </div>
 
         {/* Content */}
-        <div className="bg-white px-8 pt-2 pb-8 text-center">
+        <div className="bg-white px-8 pt-2 pb-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -131,21 +131,6 @@ export default function CardPage() {
             >
               Book a Call
             </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5, ease }}
-            className="mt-7 flex justify-center"
-          >
-            <Image
-              src="/images/logo-icon.png"
-              alt="PRice AI Marketing"
-              width={36}
-              height={36}
-              className="rounded-lg"
-            />
           </motion.div>
         </div>
       </motion.div>
