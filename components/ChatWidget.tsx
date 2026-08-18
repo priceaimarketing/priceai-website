@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -105,6 +106,7 @@ function PresetButton({
 }
 
 export default function ChatWidget() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [hasOpened, setHasOpened] = useState(false)
   const [messages, setMessages] = useState<Message[]>(INITIAL_MESSAGES)
@@ -221,6 +223,8 @@ export default function ChatWidget() {
       sendMessage()
     }
   }
+
+  if (pathname?.startsWith('/card')) return null
 
   return (
     <>
